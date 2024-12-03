@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login System</title>
+  <link rel="shortcut icon" href="./images/bookmark.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <div class="container vh-100 d-flex align-items-center justify-content-center ">
+    <!-- LOGIN FORM -->
+    <section class="login-form d-flex flex-column align-items-center justify-content-evenly col-12 col-lg-8 h-75 m-auto rounded-5 bg-opacity-75 d-block">
+        <div class="container">
+         <div class="ineer p-5 text-center">
+             <h1>Smart Login System</h1>
+             <div class="group">
+                 <div class="my-3">
+                     <input type="email" class="form-control" id="loginEmail" placeholder="Enter Your Email">
+                     <p class="text-danger p-2 mb-0 pb-0 d-none fw-bold">
+                        <i class="fa-solid fa-circle-exclamation"></i> Incorrect Email
+                    </p>   
+                     <input type="password" class="form-control mt-3" id="loginPass" placeholder="Enter Your password">
+                     <p class="text-danger p-2 mb-0 pb-0 d-none fw-bold">
+                        <i class="fa-solid fa-circle-exclamation"></i> Incorrect Password
+                      </p>
+                     <button type="submit" class="btn btn-outline-info mt-4 mb-3 w-100" id="login-btn">Login</button>
+                     <p class="text-white">Don’t have an account? <a class="text-white sign-up">Sign Up</a></p>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+    <!-- SIGNUP FORM -->
+    <section class="signup-form d-flex flex-column align-items-center justify-content-around col-12 col-lg-8 h-75 m-auto rounded-5 bg-opacity-75 d-none">
+        <div class="container">
+         <div class="ineer p-5 text-center">
+             <h1>Smart Login System</h1>
+             <div class="group">
+                 <div class="my-3">
+                     <input type="text" class="form-control" id="username" placeholder="Enter Your Name">
+                     <p class="text-danger p-2 mb-0 pb-0 fw-bold d-none">
+                        <i class="fa-solid fa-circle-exclamation"></i> Invalid UserName
+                        (Must start with letter and contain 3 - 50 characters)
+                      </p>
+                     <input type="email" class="form-control mt-3" id="email" placeholder="Enter Your Email">
+                     <p class="email-error text-danger p-2 mb-0 pb-0 fw-bold d-none">
+                        <i class="fa-solid fa-circle-exclamation"></i> Invalid Email (ex:
+                        abc@gmail.com)
+                      </p>
+                     <input type="password" class="form-control mt-3" id="pass" placeholder="Enter Your password">
+                     <p class="text-danger p-2 mb-0 pb-0 fw-bold d-none">
+                        <i class="fa-solid fa-circle-exclamation"></i> Invalid password
+                        (Must contain atleast 8 characters and 1 number)
+                      </p>
+                      <p class="fw-bold text-success fs-5 d-none">SignedUp Successfully</p>
+                     <button type="submit"  class="btn btn-outline-info mt-4 mb-3 w-100" id="signup-btn">Sign Up</button>
+                     <p class="text-white">Don’t have an account? <a class="text-white sign-in" aria-current="page">Sign In</a></p>
+                 </div>
+             </div>
+         </div>
+        </div>
+     </section>
+    <!-- Home Page -->
+     <div class="home fs-4 d-none position-relative">
+        <nav class="navbar navbar-expand-lg fixed-top d-flex justify-content-between px-5 py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white f-20" href="#">SMART LOGIN</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-warning f-20" id="signout-btn">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class=" fs-4 rounded-5">
+            <h2 class="p-5 fs-1 text-center text-white fw-bold text-uppercase">
+                Welcome
+                <span id="userNameSpan" class="d-block p-2 mt-2 text-capitalize">UserName</span>
+              </h2> 
+         </section>
+    </div>
+  </div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
